@@ -3,6 +3,14 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
+    id("org.sonarqube") version "7.3.1.8318"
+}
+
+sonar {
+    properties {
+        property("sonar.projectKey", "catenaliggette_PYATILETKA")
+        property("sonar.organization", "catenaliggette")
+    }
 }
 
 android {
