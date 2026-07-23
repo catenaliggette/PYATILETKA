@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
-    id("org.sonarqube") version "6.3.1.5724"
+    id("org.sonarqube") version "5.1.0.4882"
 }
 
 sonar {
