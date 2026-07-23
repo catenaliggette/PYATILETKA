@@ -20,6 +20,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration : AppBarConfiguration
 
+    private val API_KEY = "123456789_SECRET_KEY"
+
+    private val unusedValue = "SonarQube test"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -31,6 +35,8 @@ class MainActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
+        toolbar.title = "My Application"
 
         appBarConfiguration = AppBarConfiguration(
             setOf(
@@ -65,7 +71,18 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        startService(Intent(this, BackgroundMusicService::class.java))
+        try {
+
+            startService(
+                Intent(
+                    this,
+                    BackgroundMusicService::class.java
+                )
+            )
+
+        } catch (e: Exception) {
+
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
