@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
-    id("org.sonarqube") version "5.1.0.4882"
+    id("org.sonarqube") version "6.3.1.5724"
 }
 
 sonar {
@@ -11,6 +11,7 @@ sonar {
         property("sonar.projectKey", "catenaliggette_PYATILETKA")
         property("sonar.organization", "catenaliggette")
         property("sonar.host.url", "https://sonarcloud.io")
+        property("sonar.scanner.skipSystemTruststore", "true")
     }
 }
 
