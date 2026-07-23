@@ -10,8 +10,8 @@ sonar {
     properties {
         property("sonar.projectKey", "catenaliggette_PYATILETKA")
         property("sonar.organization", "catenaliggette")
-        property("sonar.host.url", "https://sonarcloud.io")
         property("sonar.scanner.skipSystemTruststore", "true")
+        property("sonar.host.url", "https://sonarcloud.io")
     }
 }
 
